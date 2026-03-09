@@ -1,9 +1,16 @@
-import React from 'react';
-import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
-import { RouteProp } from '@react-navigation/native';
-import { RootStackParamList } from '../types/navigation';
+import React from "react";
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  StyleSheet,
+  FlatList,
+} from "react-native";
+import { RouteProp } from "@react-navigation/native";
+import { RootStackParamList } from "../types/navigation";
 
-type RecipeDetailRouteProp = RouteProp<RootStackParamList, 'RecipeDetail'>;
+type RecipeDetailRouteProp = RouteProp<RootStackParamList, "RecipeDetail">;
 
 interface Props {
   route: RecipeDetailRouteProp;
@@ -54,40 +61,41 @@ const RecipeDetailScreen: React.FC<Props> = ({ route }) => {
         />
 
         {/* ÉTAPES DE PRÉPARATION */}
-        {recette.etapes_preparation && recette.etapes_preparation.length > 0 && (
-          <>
-            <Text style={styles.sectionTitle}>👨‍🍳 Étapes de Préparation</Text>
-            <FlatList
-          data={recette.etapes_preparation}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item, index }) => (
-            <Text style={styles.instruction}>
-              {index + 1}. {item}
-            </Text>
+        {recette.etapes_preparation &&
+          recette.etapes_preparation.length > 0 && (
+            <>
+              <Text style={styles.sectionTitle}>👨‍🍳 Étapes de Préparation</Text>
+              <FlatList
+                data={recette.etapes_preparation}
+                keyExtractor={(item, index) => index.toString()}
+                renderItem={({ item, index }) => (
+                  <Text style={styles.instruction}>
+                    {index + 1}. {item}
+                  </Text>
+                )}
+              />
+            </>
           )}
-        />
-          </>
-        )}
       </View>
     </ScrollView>
   );
-
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   imageContainer: {
-    alignItems: 'center',
+    alignItems: "center",
     paddingVertical: 20,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: "#f5f5f5",
   },
   coverImage: {
     width: 250,
     height: 200,
     borderRadius: 12,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4,
@@ -98,49 +106,49 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontWeight: 'bold',
-    color: '#1A1A2E',
+    fontWeight: "bold",
+    color: "#1A1A2E",
     marginBottom: 15,
-    textAlign: 'center',
+    textAlign: "center",
   },
   metaContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+    flexDirection: "row",
+    justifyContent: "space-around",
     marginBottom: 25,
     paddingHorizontal: 10,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: "#f9f9f9",
     borderRadius: 10,
     paddingVertical: 15,
   },
   metaItem: {
-    alignItems: 'center',
+    alignItems: "center",
   },
   metaLabel: {
     fontSize: 12,
-    color: '#999',
+    color: "#999",
     marginBottom: 5,
   },
   metaValue: {
     fontSize: 14,
-    fontWeight: '600',
-    color: '#1A1A2E',
+    fontWeight: "600",
+    color: "#1A1A2E",
   },
   sectionTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
-    color: '#1A1A2E',
+    fontWeight: "bold",
+    color: "#1A1A2E",
     marginTop: 20,
     marginBottom: 12,
   },
   ingredient: {
     fontSize: 14,
-    color: '#555',
+    color: "#555",
     lineHeight: 22,
     marginBottom: 8,
   },
-  etape: {
+  instruction: {
     fontSize: 14,
-    color: '#555',
+    color: "#555",
     lineHeight: 24,
     marginBottom: 12,
   },
