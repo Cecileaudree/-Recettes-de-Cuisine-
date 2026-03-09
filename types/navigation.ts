@@ -1,6 +1,5 @@
-import { Recette } from './recette';
-
+import { Recette } from "./recette";
 export type RootStackParamList = {
-  RecipeList: undefined;
-  RecipeDetail: { recette: Recette };
+    RecipeList: undefined;
+    RecipeDetail: { recette: Recette };
 };
