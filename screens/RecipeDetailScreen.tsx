@@ -1,8 +1,39 @@
 import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
+import { FlatList, ScrollView, StyleSheet, View } from "react-native";
 
-const BookDetailScreen = () => {
-  return <ScrollView style={styles.container}></ScrollView>;
+
+const RecipeDetailScreen:React.FC<RecipeDetailScreenProps> = ({recette}) => {
+  return (<ScrollView style={styles.container}>
+    <Image source={{ uri: recette.image }} style={styles.image} />
+        <View style={styles.header}>
+          <Text style={styles.title}>{recette.titre}</Text>
+          <Text style={styles.difficulty}>{recette.difficulte}</Text>
+          <Text style={styles.time}>{recette.temps_preparation}</Text>
+        </View>tainer}>
+
+    <View style={styles.ingredientsContainer}>
+        <Text style={styles.ingredientsTitle}>Ingrédients :</Text>
+        <FlatList
+          data={recette.ingredients}
+          keyExtractor={(item, index) => index.toString()}
+          renderItem={({ item }) => (
+            <Text style={styles.ingredient}>- {item}</Text>
+          )}
+        />
+      </View>
+      <View style={styles.instructionsContainer}>
+        <Text style={styles.instructionsTitle}>Instructions :</Text>
+        <FlatList
+          data={recette.etapes_preparation}
+          keyExtractor={(item, index) => index.toString()}
+          renderItem={({ item, index }) => (
+            <Text style={styles.instruction}>
+              {index + 1}. {item}
+            </Text>
+          )}
+        />
+      </View>
+  </ScrollView>);
 };
 
 const styles = StyleSheet.create({
