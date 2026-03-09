@@ -1,18 +1,50 @@
-import React from "react";
-import { FlatList, ScrollView, StyleSheet, View } from "react-native";
+import React from 'react';
+import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
+import { RouteProp } from '@react-navigation/native';
+import { RootStackParamList } from '../types/navigation';
 
+type RecipeDetailRouteProp = RouteProp<RootStackParamList, 'RecipeDetail'>;
 
-const RecipeDetailScreen:React.FC<RecipeDetailScreenProps> = ({recette}) => {
-  return (<ScrollView style={styles.container}>
-    <Image source={{ uri: recette.image }} style={styles.image} />
-        <View style={styles.header}>
-          <Text style={styles.title}>{recette.titre}</Text>
-          <Text style={styles.difficulty}>{recette.difficulte}</Text>
-          <Text style={styles.time}>{recette.temps_preparation}</Text>
-        </View>tainer}>
+interface Props {
+  route: RecipeDetailRouteProp;
+}
 
-    <View style={styles.ingredientsContainer}>
-        <Text style={styles.ingredientsTitle}>Ingrédients :</Text>
+const RecipeDetailScreen: React.FC<Props> = ({ route }) => {
+  // ✅ RÉCUPÉRER LA RECETTE DEPUIS LES PARAMÈTRES (TP3)
+  // route.params.recette contient la recette qu'on a envoyée depuis RecipeListScreen
+  const { recette } = route.params;
+
+  return (
+    <ScrollView style={styles.container}>
+      {/* IMAGE DE LA RECETTE */}
+      <View style={styles.imageContainer}>
+        <Image
+          source={{ uri: recette.image }}
+          style={styles.coverImage}
+          resizeMode="cover"
+        />
+      </View>
+
+      {/* CONTENU TEXTUEL */}
+      <View style={styles.content}>
+        {/* TITRE */}
+        <Text style={styles.title}>{recette.titre}</Text>
+
+        {/* INFOS PRINCIPALES */}
+        <View style={styles.metaContainer}>
+          <View style={styles.metaItem}>
+            <Text style={styles.metaLabel}>⏱️ Temps</Text>
+            <Text style={styles.metaValue}>{recette.temps_preparation}</Text>
+          </View>
+
+          <View style={styles.metaItem}>
+            <Text style={styles.metaLabel}>📊 Difficulté</Text>
+            <Text style={styles.metaValue}>{recette.difficulte}</Text>
+          </View>
+        </View>
+
+        {/* INGRÉDIENTS */}
+        <Text style={styles.sectionTitle}>📦 Ingrédients</Text>
         <FlatList
           data={recette.ingredients}
           keyExtractor={(item, index) => index.toString()}
@@ -20,10 +52,12 @@ const RecipeDetailScreen:React.FC<RecipeDetailScreenProps> = ({recette}) => {
             <Text style={styles.ingredient}>- {item}</Text>
           )}
         />
-      </View>
-      <View style={styles.instructionsContainer}>
-        <Text style={styles.instructionsTitle}>Instructions :</Text>
-        <FlatList
+
+        {/* ÉTAPES DE PRÉPARATION */}
+        {recette.etapes_preparation && recette.etapes_preparation.length > 0 && (
+          <>
+            <Text style={styles.sectionTitle}>👨‍🍳 Étapes de Préparation</Text>
+            <FlatList
           data={recette.etapes_preparation}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item, index }) => (
@@ -32,41 +66,84 @@ const RecipeDetailScreen:React.FC<RecipeDetailScreenProps> = ({recette}) => {
             </Text>
           )}
         />
+          </>
+        )}
       </View>
-  </ScrollView>);
-};
+    </ScrollView>
+  );
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
-    padding: 20,
+    backgroundColor: '#fff',
+  },
+  imageContainer: {
+    alignItems: 'center',
+    paddingVertical: 20,
+    backgroundColor: '#f5f5f5',
   },
   coverImage: {
-    width: "100%",
-    height: 300,
+    width: 250,
+    height: 200,
+    borderRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 8,
   },
-  textContainer: {
-    marginTop: 20,
+  content: {
+    padding: 20,
   },
   title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 10,
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#1A1A2E',
+    marginBottom: 15,
+    textAlign: 'center',
   },
-  author: {
-    fontSize: 18,
+  metaContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 25,
+    paddingHorizontal: 10,
+    backgroundColor: '#f9f9f9',
+    borderRadius: 10,
+    paddingVertical: 15,
+  },
+  metaItem: {
+    alignItems: 'center',
+  },
+  metaLabel: {
+    fontSize: 12,
+    color: '#999',
     marginBottom: 5,
   },
-  genre: {
-    fontSize: 16,
-    marginBottom: 15,
-    fontStyle: "italic",
+  metaValue: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#1A1A2E',
   },
-  synopsis: {
-    fontSize: 16,
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#1A1A2E',
+    marginTop: 20,
+    marginBottom: 12,
+  },
+  ingredient: {
+    fontSize: 14,
+    color: '#555',
     lineHeight: 22,
+    marginBottom: 8,
+  },
+  etape: {
+    fontSize: 14,
+    color: '#555',
+    lineHeight: 24,
+    marginBottom: 12,
   },
 });
 
-export default BookDetailScreen;
+export default RecipeDetailScreen;
