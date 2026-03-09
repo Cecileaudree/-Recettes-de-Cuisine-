@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { RouteProp } from "@react-navigation/native";
 import { RootStackParamList } from "../types/navigation";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 type RecipeDetailRouteProp = RouteProp<RootStackParamList, "RecipeDetail">;
 
@@ -22,66 +23,74 @@ const RecipeDetailScreen: React.FC<Props> = ({ route }) => {
   const { recette } = route.params;
 
   return (
-    <ScrollView style={styles.container}>
-      {/* IMAGE DE LA RECETTE */}
-      <View style={styles.imageContainer}>
-        <Image
-          source={{ uri: recette.image }}
-          style={styles.coverImage}
-          resizeMode="cover"
-        />
-      </View>
-
-      {/* CONTENU TEXTUEL */}
-      <View style={styles.content}>
-        {/* TITRE */}
-        <Text style={styles.title}>{recette.titre}</Text>
-
-        {/* INFOS PRINCIPALES */}
-        <View style={styles.metaContainer}>
-          <View style={styles.metaItem}>
-            <Text style={styles.metaLabel}>⏱️ Temps</Text>
-            <Text style={styles.metaValue}>{recette.temps_preparation}</Text>
-          </View>
-
-          <View style={styles.metaItem}>
-            <Text style={styles.metaLabel}>📊 Difficulté</Text>
-            <Text style={styles.metaValue}>{recette.difficulte}</Text>
-          </View>
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView style={styles.container}>
+        {/* IMAGE DE LA RECETTE */}
+        <View style={styles.imageContainer}>
+          <Image
+            source={{ uri: recette.image }}
+            style={styles.coverImage}
+            resizeMode="cover"
+          />
         </View>
 
-        {/* INGRÉDIENTS */}
-        <Text style={styles.sectionTitle}>📦 Ingrédients</Text>
-        <FlatList
-          data={recette.ingredients}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item }) => (
-            <Text style={styles.ingredient}>- {item}</Text>
-          )}
-        />
+        {/* CONTENU TEXTUEL */}
+        <View style={styles.content}>
+          {/* TITRE */}
+          <Text style={styles.title}>{recette.titre}</Text>
 
-        {/* ÉTAPES DE PRÉPARATION */}
-        {recette.etapes_preparation &&
-          recette.etapes_preparation.length > 0 && (
-            <>
-              <Text style={styles.sectionTitle}>👨‍🍳 Étapes de Préparation</Text>
-              <FlatList
-                data={recette.etapes_preparation}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={({ item, index }) => (
-                  <Text style={styles.instruction}>
-                    {index + 1}. {item}
-                  </Text>
-                )}
-              />
-            </>
-          )}
-      </View>
-    </ScrollView>
+          {/* INFOS PRINCIPALES */}
+          <View style={styles.metaContainer}>
+            <View style={styles.metaItem}>
+              <Text style={styles.metaLabel}>⏱️ Temps</Text>
+              <Text style={styles.metaValue}>{recette.temps_preparation}</Text>
+            </View>
+
+            <View style={styles.metaItem}>
+              <Text style={styles.metaLabel}>📊 Difficulté</Text>
+              <Text style={styles.metaValue}>{recette.difficulte}</Text>
+            </View>
+          </View>
+
+          {/* INGRÉDIENTS */}
+          <Text style={styles.sectionTitle}>📦 Ingrédients</Text>
+          <FlatList
+            data={recette.ingredients}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={({ item }) => (
+              <Text style={styles.ingredient}>- {item}</Text>
+            )}
+          />
+
+          {/* ÉTAPES DE PRÉPARATION */}
+          {recette.etapes_preparation &&
+            recette.etapes_preparation.length > 0 && (
+              <>
+                <Text style={styles.sectionTitle}>
+                  👨‍🍳 Étapes de Préparation
+                </Text>
+                <FlatList
+                  data={recette.etapes_preparation}
+                  keyExtractor={(item, index) => index.toString()}
+                  renderItem={({ item, index }) => (
+                    <Text style={styles.instruction}>
+                      {index + 1}. {item}
+                    </Text>
+                  )}
+                />
+              </>
+            )}
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: "#fff",
+  },
   container: {
     flex: 1,
     backgroundColor: "#fff",
