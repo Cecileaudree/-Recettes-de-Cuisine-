@@ -1,7 +1,9 @@
 export interface Recette {
     id: number;
-    title: string;
-    cover: string;
+    titre: string;
+    temps_preparation: string;
+    difficulte: string;
+    image: string;
     ingredients: string[];
-    instructions?: string;
+    etapes_preparation?: string[];
 }

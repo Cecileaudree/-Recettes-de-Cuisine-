@@ -6,45 +6,45 @@ export default [
     difficulte: "Moyen",
     image: "https://www.cuisineaz.com/recettes/spaghetti-carbonara-10809.aspx",
     ingredients: [
-      "200g spaghetti",
+      "200g spaghettis",
         "100g pancetta",
-        "2 large eggs",
-        "50g Pecorino cheese",
-        "50g Parmesan cheese",
-        "2 cloves of garlic",
-        "Salt and pepper to taste"
+        "2 œufs",
+        "50g fromage Pecorino",
+        "50g fromage Parmesan",
+        "2 gousses d'ail",
+        "Sel et poivre au goût"
     ],
     etapes_preparation: [
-      "Cook the spaghetti in salted boiling water until al dente.",
-      "In a pan, cook the pancetta with the garlic until crispy.",
-      "In a bowl, beat the eggs and mix in the cheeses.",
-      "Drain the spaghetti and combine with the pancetta.",
-      "Remove from heat and quickly mix in the egg and cheese mixture.",
-      "Serve immediately with extra cheese on top."
+      "Étape 1: Faire cuire les spaghettis dans l'eau bouillante salée jusqu'à al dente.",
+      "Étape 2: Dans une poêle, faire cuire la pancetta avec l'ail jusqu'à ce qu'elle soit croustillante.",
+      "Étape 3: Dans un bol, battre les œufs et mélanger avec les fromages.",
+      "Étape 4: Égoutter les spaghettis et les mélanger avec la pancetta.",
+      "Étape 5: Retirer du feu et mélanger rapidement avec le mélange d'œuf et fromage.",
+      "Étape 6: Servir immédiatement avec du fromage supplémentaire dessus."
     ]
   },
     {
     id: 2,
-    titre: "Chicken Curry",
+    titre: "Curry de poulet",
     temps_preparation: "45 minutes",
     difficulte: "Facile",
     image: "https://www.cuisineaz.com/recettes/curry-de-poulet-10810.aspx",
     ingredients: [
-        "500g chicken breast",
-        "2 onions",
-        "3 cloves of garlic",
-        "1 tablespoon curry powder",
-        "400ml coconut milk",
-        "2 tablespoons vegetable oil",
-        "Salt and pepper to taste"
+        "500g filet de poulet",
+        "2 oignons",
+        "3 gousses d'ail",
+        "1 cuillère à soupe de poudre de curry",
+        "400ml lait de coco",
+        "2 cuillères à soupe d'huile végétale",
+        "Sel et poivre au goût"
     ],
     etapes_preparation: [
-      "Heat the oil in a pan and sauté the onions and garlic until soft.",
-      "Add the chicken pieces and cook until browned.",
-      "Stir in the curry powder and cook for another minute.",
-      "Pour in the coconut milk, bring to a simmer, and cook until the chicken is cooked through and the sauce has thickened.",
-      "Season with salt and pepper to taste.",
-      "Serve with rice."
+      "Étape 1: Chauffer l'huile dans une poêle et faire sauter les oignons et l'ail jusqu'à ce qu'ils soient mous.",
+      "Étape 2: Ajouter les morceaux de poulet et faire cuire jusqu'à ce qu'ils soient dorés.",
+      "Étape 3: Ajouter la poudre de curry et faire cuire une minute supplémentaire.",
+      "Étape 4: Verser le lait de coco, porter à frémissement, et faire cuire jusqu'à ce que le poulet soit cuit et la sauce épaissie.",
+      "Étape 5: Assaisonner avec du sel et du poivre au goût.",
+      "Étape 6: Servir avec du riz."
     ]
   },
     {
@@ -54,21 +54,21 @@ export default [
     difficulte: "Facile",
     image: "https://www.cuisineaz.com/recettes/taboule-10811.aspx",
     ingredients: [
-        "100g bulgur",
-        "1 bunch fresh parsley",
-        "4 tomatoes",
-        "1 onion",
-        "1 bunch fresh mint",
-        "Juice of 2 lemons",
-        "4 tablespoons olive oil",
-        "Salt and pepper to taste"
+        "100g boulgour",
+        "1 bouquet de persil frais",
+        "4 tomates",
+        "1 oignon",
+        "1 bouquet de menthe fraîche",
+        "Jus de 2 citrons",
+        "4 cuillères à soupe d'huile d'olive",
+        "Sel et poivre au goût"
     ],
     etapes_preparation: [
-      "Rinse the bulgur and soak it in cold water for 20 minutes, then drain.",
-      "Finely chop the parsley, tomatoes, onion, and mint.",
-      "In a large bowl, mix the bulgur with the chopped vegetables and herbs.",
-      "Add the lemon juice, olive oil, salt, and pepper.",
-      "Toss well and let it rest for 30 minutes before serving."
+      "Étape 1: Rincer le boulgour et le faire tremper dans l'eau froide pendant 20 minutes, puis l'égoutter.",
+      "Étape 2: Hacher finement le persil, les tomates, l'oignon et la menthe.",
+      "Étape 3: Dans un grand bol, mélanger le boulgour avec les légumes et les herbes hachés.",
+      "Étape 4: Ajouter le jus de citron, l'huile d'olive, le sel et le poivre.",
+      "Étape 5: Bien mélanger et laisser reposer 30 minutes avant de servir."
     ]
   },
     {
@@ -78,22 +78,22 @@ export default [
     difficulte: "Moyen",
     image: "https://www.cuisineaz.com/recettes/ndole-10812.aspx",
     ingredients: [
-        "500g bitter leaves (ndole)",
-        "500g beef or chicken",
-        "200g crayfish",
-        "100g peanuts",
-        "2 onions",
-        "3 cloves of garlic",
-        "2 tablespoons palm oil",
-        "Cassava sticks for serving",
-        "Salt and pepper to taste"
+        "500g feuilles amères (ndolé)",
+        "500g viande de bœuf ou poulet",
+        "200g crevettes",
+        "100g cacahuètes",
+        "2 oignons",
+        "3 gousses d'ail",
+        "2 cuillères à soupe d'huile de palme",
+        "Bâtons de manioc pour servir",
+        "Sel et poivre au goût"
     ],
     etapes_preparation: [
-      "Sauté the onions and garlic in palm oil.",
-      "Add the meat, crayfish, and peanuts.",
-      "Stir in the bitter leaves and cook until the sauce thickens.",
-      "Season with salt and pepper.",
-      "Serve hot with boiled cassava sticks."
+      "Étape 1: Faire sauter les oignons et l'ail dans l'huile de palme.",
+      "Étape 2: Ajouter la viande, les crevettes et les cacahuètes.",
+      "Étape 3: Ajouter les feuilles amères et faire cuire jusqu'à ce que la sauce épaississe.",
+      "Étape 4: Assaisonner avec du sel et du poivre.",
+      "Étape 5: Servir chaud avec des bâtons de manioc bouillis."
     ]
   }
 ];
