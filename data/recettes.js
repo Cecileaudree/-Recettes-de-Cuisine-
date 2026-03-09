@@ -1,0 +1,99 @@
+export default [
+  {
+    id: 1,
+    titre: "Spaghetti Carbonara",
+    temps_preparation: "30 minutes",
+    difficulte: "Moyen",
+    image: "https://www.cuisineaz.com/recettes/spaghetti-carbonara-10809.aspx",
+    ingredients: [
+      "200g spaghettis",
+        "100g pancetta",
+        "2 œufs",
+        "50g fromage Pecorino",
+        "50g fromage Parmesan",
+        "2 gousses d'ail",
+        "Sel et poivre au goût"
+    ],
+    etapes_preparation: [
+      "Étape 1: Faire cuire les spaghettis dans l'eau bouillante salée jusqu'à al dente.",
+      "Étape 2: Dans une poêle, faire cuire la pancetta avec l'ail jusqu'à ce qu'elle soit croustillante.",
+      "Étape 3: Dans un bol, battre les œufs et mélanger avec les fromages.",
+      "Étape 4: Égoutter les spaghettis et les mélanger avec la pancetta.",
+      "Étape 5: Retirer du feu et mélanger rapidement avec le mélange d'œuf et fromage.",
+      "Étape 6: Servir immédiatement avec du fromage supplémentaire dessus."
+    ]
+  },
+    {
+    id: 2,
+    titre: "Curry de poulet",
+    temps_preparation: "45 minutes",
+    difficulte: "Facile",
+    image: "https://www.cuisineaz.com/recettes/curry-de-poulet-10810.aspx",
+    ingredients: [
+        "500g filet de poulet",
+        "2 oignons",
+        "3 gousses d'ail",
+        "1 cuillère à soupe de poudre de curry",
+        "400ml lait de coco",
+        "2 cuillères à soupe d'huile végétale",
+        "Sel et poivre au goût"
+    ],
+    etapes_preparation: [
+      "Étape 1: Chauffer l'huile dans une poêle et faire sauter les oignons et l'ail jusqu'à ce qu'ils soient mous.",
+      "Étape 2: Ajouter les morceaux de poulet et faire cuire jusqu'à ce qu'ils soient dorés.",
+      "Étape 3: Ajouter la poudre de curry et faire cuire une minute supplémentaire.",
+      "Étape 4: Verser le lait de coco, porter à frémissement, et faire cuire jusqu'à ce que le poulet soit cuit et la sauce épaissie.",
+      "Étape 5: Assaisonner avec du sel et du poivre au goût.",
+      "Étape 6: Servir avec du riz."
+    ]
+  },
+    {
+    id: 3,
+    titre: "Taboulé",
+    temps_preparation: "20 minutes",
+    difficulte: "Facile",
+    image: "https://www.cuisineaz.com/recettes/taboule-10811.aspx",
+    ingredients: [
+        "100g boulgour",
+        "1 bouquet de persil frais",
+        "4 tomates",
+        "1 oignon",
+        "1 bouquet de menthe fraîche",
+        "Jus de 2 citrons",
+        "4 cuillères à soupe d'huile d'olive",
+        "Sel et poivre au goût"
+    ],
+    etapes_preparation: [
+      "Étape 1: Rincer le boulgour et le faire tremper dans l'eau froide pendant 20 minutes, puis l'égoutter.",
+      "Étape 2: Hacher finement le persil, les tomates, l'oignon et la menthe.",
+      "Étape 3: Dans un grand bol, mélanger le boulgour avec les légumes et les herbes hachés.",
+      "Étape 4: Ajouter le jus de citron, l'huile d'olive, le sel et le poivre.",
+      "Étape 5: Bien mélanger et laisser reposer 30 minutes avant de servir."
+    ]
+  },
+    {
+    id: 4,
+    titre: "Ndolè avec bâtons de manioc",
+    temps_preparation: "1 heure",
+    difficulte: "Moyen",
+    image: "https://www.cuisineaz.com/recettes/ndole-10812.aspx",
+    ingredients: [
+        "500g feuilles amères (ndolé)",
+        "500g viande de bœuf ou poulet",
+        "200g crevettes",
+        "100g cacahuètes",
+        "2 oignons",
+        "3 gousses d'ail",
+        "2 cuillères à soupe d'huile de palme",
+        "Bâtons de manioc pour servir",
+        "Sel et poivre au goût"
+    ],
+    etapes_preparation: [
+      "Étape 1: Faire sauter les oignons et l'ail dans l'huile de palme.",
+      "Étape 2: Ajouter la viande, les crevettes et les cacahuètes.",
+      "Étape 3: Ajouter les feuilles amères et faire cuire jusqu'à ce que la sauce épaississe.",
+      "Étape 4: Assaisonner avec du sel et du poivre.",
+      "Étape 5: Servir chaud avec des bâtons de manioc bouillis."
+    ]
+  }
+];
