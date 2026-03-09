@@ -4,7 +4,7 @@ export default [
     titre: "Spaghetti Carbonara",
     temps_preparation: "30 minutes",
     difficulte: "Moyen",
-    image: "https://www.cuisineaz.com/recettes/spaghetti-carbonara-10809.aspx",
+    image: "https://www.bing.com/images/search?view=detailV2&ccid=KLptre%2ba&id=C5F3095695D5E49D6D273465A32C6C912DB000E9&thid=OIP.KLptre-amjni-T1pzKjzwwHaE6&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.28ba6dadef9a9a39e2f93d69cca8f3c3%3frik%3d6QCwLZFsLKNlNA%26riu%3dhttp%253a%252f%252fimages.lifesambrosia.com%252ffood%252flarge%252fspaghetti-carbonara.jpg%26ehk%3d81%252fLZfetAXaN3BfZo51Ai0Zjn4wFf0%252bFiZYXhN9seTQ%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1062&expw=1600&q=Spaghetti+Carbonara&FORM=IRPRST&ck=23EB68DFF13CD62D8A2DCBFD00EC8129&selectedIndex=45&itb=0",
     ingredients: [
       "200g spaghettis",
       "100g pancetta",
@@ -25,10 +25,10 @@ export default [
   },
   {
     id: 2,
-    titre: "Curry de poulet",
+    titre: "poulet au curry",
     temps_preparation: "45 minutes",
     difficulte: "Facile",
-    image: "https://www.cuisineaz.com/recettes/curry-de-poulet-10810.aspx",
+    image: "https://www.bing.com/images/search?view=detailV2&ccid=mQG%2bq2i6&id=9E44E935C5384E7BFAB0739025FCB2F785DEE85D&thid=OIP.mQG-q2i6-KzPcRIs1eIV-AHaHa&mediaurl=https%3a%2f%2fcdn.chefclub.tools%2fuploads%2frecipes%2fcover-hd%2ff287b191-dc8e-4c85-bbb6-e26387c354d3_wXOgZ4E.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.9901beab68baf8accf71122cd5e215f8%3frik%3dXejehfey%252fCWQcw%26pid%3dImgRaw%26r%3d0&exph=1080&expw=1080&q=httpspoulet+au+curry&FORM=IRPRST&ck=9EECF631EBB3981769EC3CD2594FEA29&selectedIndex=8&itb=0",
     ingredients: [
       "500g filet de poulet",
       "2 oignons",
@@ -52,7 +52,7 @@ export default [
     titre: "Taboulé",
     temps_preparation: "20 minutes",
     difficulte: "Facile",
-    image: "https://www.cuisineaz.com/recettes/taboule-10811.aspx",
+    image: "https://www.bing.com/images/search?view=detailV2&ccid=MlKP%2fRKy&id=970BD673390ADD7B1DD464622734F3340AE5493F&thid=OIP.MlKP_RKySdVFSMQkoWKGzwHaIm&mediaurl=https%3a%2f%2fwww.jardiner-malin.fr%2fwp-content%2fuploads%2f2021%2f07%2fTaboule-maison-recette.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.32528ffd12b249d54548c424a16286cf%3frik%3dP0nlCjTzNCdiZA%26pid%3dImgRaw%26r%3d0&exph=1393&expw=1200&q=Taboul%c3%a9&FORM=IRPRST&ck=09B3EBE6504FB16521020F3784CD6959&selectedIndex=12&itb=0",
     ingredients: [
       "100g boulgour",
       "1 bouquet de persil frais",
@@ -73,10 +73,10 @@ export default [
   },
   {
     id: 4,
-    titre: "Ndolè avec bâtons de manioc",
+    titre: "Ndolè",
     temps_preparation: "1 heure",
     difficulte: "Moyen",
-    image: "https://www.cuisineaz.com/recettes/ndole-10812.aspx",
+    image: "https://camerounactuel.com/wp-content/uploads/2024/05/Ndole-1_jpg2.jpeg",
     ingredients: [
       "500g feuilles amères (ndolé)",
       "500g viande de bœuf ou poulet",
