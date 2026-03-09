@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FlatList, Text, View, StyleSheet, TextInput } from "react-native";
+import recettes from "../data/recettes";
 
 import RecipeCard from "../components/RecipeCard";
 
@@ -8,8 +9,8 @@ import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 const RecipeListScreen: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const filteredRecipes = recipesData.filter((recipe) =>
-    recipe.title.toLowerCase().includes(searchQuery.toLowerCase()),
+  const filteredRecipes = recettes.filter((recette) =>
+    recette.titre.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -17,14 +18,14 @@ const RecipeListScreen: React.FC = () => {
       <View style={styles.header}>
         <Text style={styles.title}>Mes Recettes</Text>
         <Text style={styles.headerSubtitle}>
-          {filteredRecipes.length} recettes disponibles
+          {recettes.length} recettes disponibles
         </Text>
       </View>
       <View style={styles.listContainer}>
         <FlatList
           data={filteredRecipes}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => <RecipeCard recipe={item} />}
+          renderItem={({ item }) => <RecipeCard recette={item} />}
           showsVerticalScrollIndicator={false}
         />
       </View>
